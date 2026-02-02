@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Copy Explainer - New Vintage Handbags</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0A0A0A;color:#B8B8B8;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6}
+  .container{max-width:900px;margin:0 auto;padding:48px 24px}
+  .back-link{display:inline-block;color:#C9A96E;text-decoration:none;font-size:14px;margin-bottom:32px}
+  .back-link:hover{text-decoration:underline}
+  h1{font-family:'Playfair Display',serif;font-size:36px;color:#FFF;margin-bottom:8px}
+  h2{font-family:'Playfair Display',serif;font-size:26px;color:#FFF;margin-bottom:16px}
+  h3{font-family:'Playfair Display',serif;font-size:20px;color:#C9A96E;margin-bottom:12px}
+  .subtitle{color:#888;font-size:16px;margin-bottom:48px}
+  .section{margin-bottom:32px}
+  .section-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:#141414;border:1px solid #2A2A2A;border-radius:12px;cursor:pointer;transition:all .2s ease}
+  .section-header:hover{border-color:rgba(201,169,110,.4);background:#1A1A1A}
+  .section-header.open{border-radius:12px 12px 0 0;border-bottom-color:transparent;border-color:rgba(201,169,110,.3)}
+  .section-title{font-family:'Playfair Display',serif;font-size:22px;color:#FFF}
+  .toggle-icon{font-size:20px;color:#888;transition:transform .2s ease}
+  .section-header.open .toggle-icon{transform:rotate(180deg)}
+  .section-body{display:none;border:1px solid rgba(201,169,110,.3);border-top:none;border-radius:0 0 12px 12px;padding:24px;background:#111}
+  .section-body.open{display:block}
+  .q-block{margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #1F1F1F}
+  .q-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+  .q-num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#C9A96E;background:rgba(201,169,110,.1);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px}
+  .q-type{font-size:12px;color:#888;margin-bottom:8px}
+  .q-text{font-family:'Playfair Display',serif;font-size:18px;color:#FFF;margin-bottom:12px}
+  .q-rationale{margin-bottom:16px;font-size:15px;color:#999;line-height:1.7}
+  .answer-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+  .answer-table th{text-align:left;padding:10px 12px;background:#1A1A1A;color:#C9A96E;font-size:11px;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid #2A2A2A}
+  .answer-table td{padding:10px 12px;border-bottom:1px solid #1F1F1F;vertical-align:top}
+  .answer-table tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;margin-right:4px;margin-bottom:4px}
+  .tag-bold{background:rgba(239,68,68,.15);color:#EF4444}
+  .tag-classic{background:rgba(59,130,246,.15);color:#6DA3F6}
+  .tag-gift{background:rgba(245,158,11,.15);color:#F59E0B}
+  .tag-rebel{background:rgba(168,85,247,.15);color:#A855F7}
+  .tag-aspiring{background:rgba(34,197,94,.15);color:#22C55E}
+  .profile-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+  .profile-table th{text-align:left;padding:12px;background:#1A1A1A;color:#C9A96E;font-size:11px;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid #2A2A2A}
+  .profile-table td{padding:12px;border-bottom:1px solid #1F1F1F;vertical-align:top}
+  .profile-table tr:last-child td{border-bottom:none}
+  .scoring-bar{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .scoring-fill{height:6px;border-radius:3px;background:linear-gradient(90deg,#C9A96E,#D4B97E)}
+  .scoring-label{font-size:12px;color:#888;min-width:40px}
+  .technique-card{background:#141414;border:1px solid #2A2A2A;border-radius:8px;padding:16px;margin-bottom:12px}
+  .technique-name{font-weight:600;color:#FFF;margin-bottom:4px}
+  .technique-desc{font-size:14px;color:#999}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,.3),transparent);margin:24px 0}
+  .callout{background:rgba(201,169,110,.08);border-left:3px solid #C9A96E;padding:16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;color:#D4B97E}
+  @media(max-width:640px){
+    h1{font-size:28px}
+    .answer-table,.profile-table{font-size:12px}
+    .answer-table th,.answer-table td,.profile-table th,.profile-table td{padding:8px 6px}
+    .section-header{padding:16px}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">&#8592; Back to Overview</a>
+  <h1>Quiz Copy Explainer</h1>
+  <p class="subtitle">The strategy, psychology, and reasoning behind every copy decision in the New Vintage Handbags quiz funnel</p>
+
+  <!-- SECTION 1: Question Rationale -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">1. Question Rationale</span>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <div class="q-block">
+        <span class="q-num">Question 1</span>
+        <div class="q-type">Type: Card Selection | Diagnostic: desired_outcome</div>
+        <div class="q-text">What draws you to a handbag first?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> Opens the quiz with an identity-level question. Instead of asking about budget or preferences directly, it asks what they VALUE in a handbag. This immediately frames the quiz as a personality exploration, not a shopping quiz. It also serves as the primary diagnostic question for email personalization, since each answer reveals a fundamentally different motivation (aesthetics vs. craftsmanship vs. meaning vs. exclusivity).</div>
+        <div class="q-rationale"><strong>Card selection format:</strong> Visual cards with icons create an engaging first impression. The descriptions under each answer help users identify with the psychology, not just the surface answer.</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-num">Question 2</span>
+        <div class="q-type">Type: Scale Slider</div>
+        <div class="q-text">How adventurous are you with your accessories?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> Directly measures the boldness spectrum, which is the primary differentiator between profiles. A slider feels natural for a spectrum answer and prevents the "right answer" bias that multiple choice can create. Users are more honest when they can place themselves on a continuum.</div>
+        <div class="q-rationale"><strong>Slider labels:</strong> "I keep it classic" to "The bolder, the better" uses approachable language instead of numeric scales. Both ends feel valid and aspirational.</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-num">Question 3</span>
+        <div class="q-type">Type: Tag Cloud (multi-select) | Diagnostic: current_situation</div>
+        <div class="q-text">Which occasions would you carry a painted bag?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> Reveals lifestyle context and purchase intent. Someone who selects "everyday errands" has different needs than "weddings & events." The multi-select format captures nuance. This is the second diagnostic question because it tells us HOW the person will use the product, which directly informs email content recommendations.</div>
+        <div class="q-rationale"><strong>Tag cloud format:</strong> Pill-style tags feel light and fun. Multi-select generates rich data for personalization without making the user choose just one answer.</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-num">Question 4</span>
+        <div class="q-type">Type: Emoji Scale</div>
+        <div class="q-text">How do you feel about your current handbag collection?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> Gauges dissatisfaction with current collection (high dissatisfaction = higher purchase intent). The emoji format makes an potentially sensitive question feel playful and safe. The helper text "Be honest. We won't judge!" lowers the guard. This question directly correlates with temperature scoring, since someone who is "frustrated" or "just getting started" is in a different buying state than someone who is "obsessed."</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-num">Question 5</span>
+        <div class="q-type">Type: Multiple Choice | Diagnostic: buying_signal</div>
+        <div class="q-text">A friend compliments your bag. What do you most want them to say?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> This is the most psychologically revealing question in the quiz. It asks what EMOTIONAL PAYOFF the user seeks from their accessories. "Where did you get that?!" = social currency seeker. "Most gorgeous bag" = aesthetics-driven. "That's actual art" = craft appreciator. "Need one for my mom" = gift-oriented. Each answer maps directly to how we position products in follow-up emails.</div>
+        <div class="q-rationale"><strong>Framing as a friend's compliment:</strong> Projection technique. Asking what compliment they want is more revealing than asking what they value, because it taps into aspirational identity.</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-num">Question 6</span>
+        <div class="q-type">Type: Yes/No Toggle</div>
+        <div class="q-text">Would you consider having a custom design created just for you?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> Direct buying signal. "Yes" answers score 16 points and heavily tag toward the personalization spectrum. This question also informs the CTA strategy: custom-interested users get pushed toward the consultation process, while catalog browsers get pushed toward ready-to-ship pieces. The toggle format makes it feel low-commitment while capturing high-value intent data.</div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-num">Question 7</span>
+        <div class="q-type">Type: Star Rating</div>
+        <div class="q-text">How important is owning something truly one-of-a-kind?</div>
+        <div class="q-rationale"><strong>Why this question:</strong> Final question captures the core value proposition alignment. NVH's entire business is built on uniqueness. Someone who rates this 5 stars is deeply aligned with the brand. 1 star means they need more education on why one-of-one matters. This question has the widest score spread (4-16 points) making it highly influential on the final temperature reading.</div>
+        <div class="q-rationale"><strong>Star rating format:</strong> Stars feel familiar and fast. Perfect for the final question when the user is ready to see results. The labels ("nice to have" to "non-negotiable") add personality.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Answer Psychology -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">2. Answer Psychology</span>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <p style="margin-bottom:20px;color:#999">Each answer is designed to reveal a specific psychological trait while making the user feel understood. Here is what each answer tells us about the quiz taker:</p>
+
+      <table class="answer-table">
+        <tr><th>Question</th><th>Answer</th><th>Reveals</th><th>Primary Profile</th></tr>
+        <tr><td>Q1</td><td>Bold design that turns heads</td><td>Seeks social validation through fashion; outgoing, expressive personality</td><td>Statement Maker</td></tr>
+        <tr><td>Q1</td><td>Timeless elegance</td><td>Values quality over novelty; discerning, patient, investment-minded</td><td>Classic Collector</td></tr>
+        <tr><td>Q1</td><td>Personal story or meaning</td><td>Emotionally-driven purchaser; values connection and personalization</td><td>Sentimental Gifter</td></tr>
+        <tr><td>Q1</td><td>Something nobody else has</td><td>Independence and originality; anti-conformist, values uniqueness</td><td>Creative Rebel</td></tr>
+        <tr><td>Q4</td><td>Obsessed, always want more</td><td>Existing collector mentality; high purchase frequency, quality-focused</td><td>Classic Collector</td></tr>
+        <tr><td>Q4</td><td>Pretty happy, missing something</td><td>Open to upgrading; needs a compelling reason to add to collection</td><td>Aspiring Luxurist</td></tr>
+        <tr><td>Q4</td><td>Meh, nothing stands out</td><td>Dissatisfied with current options; ready for something different</td><td>Statement Maker / Rebel</td></tr>
+        <tr><td>Q4</td><td>Frustrated, everything looks the same</td><td>High pain point with mass-market luxury; strong purchase motivation</td><td>Creative Rebel</td></tr>
+        <tr><td>Q4</td><td>Just getting started</td><td>New to luxury; needs guidance, reassurance, and accessible entry points</td><td>Aspiring Luxurist</td></tr>
+        <tr><td>Q5</td><td>"WHERE did you get that?!"</td><td>Seeks social currency; wants to be a trendsetter and conversation starter</td><td>Statement Maker</td></tr>
+        <tr><td>Q5</td><td>"Most gorgeous bag ever"</td><td>Seeks aesthetic validation; beauty and craftsmanship are primary drivers</td><td>Classic Collector</td></tr>
+        <tr><td>Q5</td><td>"That's actual art"</td><td>Seeks intellectual/artistic validation; values craft and subversion</td><td>Creative Rebel</td></tr>
+        <tr><td>Q5</td><td>"Need one for my mom"</td><td>Gift-oriented mindset; values making others happy; strong referral potential</td><td>Sentimental Gifter</td></tr>
+        <tr><td>Q6</td><td>Absolutely, sign me up</td><td>High commitment, personalization-driven; likely custom request lead</td><td>Gifter / Rebel</td></tr>
+        <tr><td>Q6</td><td>I'd rather pick from catalog</td><td>Lower commitment, wants curated options; catalog browsing lead</td><td>Collector / Luxurist</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Scoring Logic -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">3. Scoring Logic Explained</span>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <h3>How Temperature Scoring Works</h3>
+      <p style="margin-bottom:16px;color:#999">Each answer assigns a point value (0-18). Points accumulate across all 7 questions toward a maximum of 100. Higher scores indicate higher purchase intent and buying readiness.</p>
+
+      <div class="callout">The score determines TEMPERATURE (email sequence routing). The PROFILE is determined separately by tag accumulation. A user can be a Cold Statement Maker or a Hot Aspiring Luxurist. Temperature and profile are independent.</div>
+
+      <h3 style="margin-top:24px">Score-to-Temperature Mapping</h3>
+      <table class="answer-table" style="margin-bottom:24px">
+        <tr><th>Temperature</th><th>Score Range</th><th>Email Sequence</th><th>CTA Strategy</th></tr>
+        <tr><td style="color:#22C55E;font-weight:600">Hot</td><td>80-100</td><td>Hot Path (4 emails)</td><td>Direct CTAs, urgency, consultation push</td></tr>
+        <tr><td style="color:#F59E0B;font-weight:600">Warm</td><td>50-79</td><td>Warm Activation (6 emails)</td><td>Case studies, objection handling, options</td></tr>
+        <tr><td style="color:#3B82F6;font-weight:600">Cold</td><td>0-49</td><td>Cold Nurture (7 emails)</td><td>Education, myths, social proof, soft CTAs</td></tr>
+      </table>
+
+      <h3>High-Scoring Answers (Intent Signals)</h3>
+      <p style="margin-bottom:12px;color:#999">These answers contribute the most points, indicating readiness to purchase:</p>
+      <ul style="margin-left:20px;color:#999;margin-bottom:16px;font-size:14px">
+        <li>Q1: "Bold design that turns heads" (16 pts) or "Something nobody else has" (14 pts)</li>
+        <li>Q2: Slider 8-10 range (16 pts)</li>
+        <li>Q4: "Obsessed but always want more" (16 pts) or "Frustrated, everything the same" (14 pts)</li>
+        <li>Q5: "Where did you get that?!" (16 pts)</li>
+        <li>Q6: "Absolutely, sign me up" for custom (16 pts)</li>
+        <li>Q7: 5 stars, "Non-negotiable" (16 pts)</li>
+      </ul>
+
+      <h3>Profile Assignment (Tag-Based)</h3>
+      <p style="margin-bottom:12px;color:#999">Each answer carries segment tags. The profile with the most accumulated tags wins.</p>
+      <table class="answer-table">
+        <tr><th>Profile</th><th>Primary Tags</th><th>Secondary Tags</th></tr>
+        <tr><td style="color:#FFF">Statement Maker</td><td><span class="tag tag-bold">bold</span><span class="tag tag-bold">color</span><span class="tag tag-bold">statement</span></td><td>trend, social</td></tr>
+        <tr><td style="color:#FFF">Classic Collector</td><td><span class="tag tag-classic">classic</span><span class="tag tag-classic">elegant</span><span class="tag tag-classic">timeless</span></td><td>investment, refined</td></tr>
+        <tr><td style="color:#FFF">Sentimental Gifter</td><td><span class="tag tag-gift">gift</span><span class="tag tag-gift">personal</span><span class="tag tag-gift">sentimental</span></td><td>milestone, meaningful</td></tr>
+        <tr><td style="color:#FFF">Creative Rebel</td><td><span class="tag tag-rebel">rebel</span><span class="tag tag-rebel">edgy</span><span class="tag tag-rebel">artistic</span></td><td>sustainability, subversive</td></tr>
+        <tr><td style="color:#FFF">Aspiring Luxurist</td><td><span class="tag tag-aspiring">trend</span><span class="tag tag-aspiring">aspirational</span><span class="tag tag-aspiring">entry</span></td><td>social, first-time</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Email Strategy -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">4. Email Sequence Strategy</span>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <h3>Layered Personalization Architecture</h3>
+      <p style="margin-bottom:16px;color:#999">Every quiz lead receives emails personalized on three layers:</p>
+      <div class="technique-card">
+        <div class="technique-name">Layer 1: Temperature (Sequence Selection)</div>
+        <div class="technique-desc">Hot leads get direct CTAs and urgency. Cold leads get education and social proof. This ensures no lead feels pressured or neglected.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Layer 2: Profile (Content Blocks)</div>
+        <div class="technique-desc">10 emails contain {{profile_block}} placeholders. Each resolves to profile-specific copy (50 total blocks). A Statement Maker sees different pain points, stories, and visions than a Sentimental Gifter.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Layer 3: Quiz Answers (Answer Callbacks)</div>
+        <div class="technique-desc">7 emails contain {{answer_callback}} placeholders. These reference specific quiz answers naturally: "You mentioned you'd carry a painted bag for everyday errands..." This creates a "they really listened" feeling.</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3>Sequence Design Philosophy</h3>
+      <div class="technique-card">
+        <div class="technique-name">Welcome (All Leads, Days 0-5)</div>
+        <div class="technique-desc">Delivers results, reveals a "blindspot" insight, shares an actionable tip, and introduces the brand story. Every lead gets this regardless of temperature. Goal: establish trust and demonstrate value.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Cold Nurture (Days 1-23)</div>
+        <div class="technique-desc">7-email education sequence. Teaches what painted bags are, how they're made, debunks myths, shares customer stories, and paints a vision of transformation. Ends with a soft check-in. Never pushy. Goal: move from awareness to consideration.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Warm Activation (Days 1-15)</div>
+        <div class="technique-desc">6-email conversion sequence. Opens with personalized answer reference, shares a case study, handles the #1 objection (mock-up process), compiles social proof, presents three purchase paths, and closes with a before/after comparison. Goal: remove barriers and inspire action.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Hot Path (Days 1-9)</div>
+        <div class="technique-desc">4-email fast-track. Direct CTA with curated picks, speed-focused case study, scarcity/urgency nudge, and final emotional push. These leads already want to buy. Goal: reduce friction and create urgency.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Re-Engagement (Post-Sequence)</div>
+        <div class="technique-desc">3-email win-back. Sent after the temperature sequence ends. Casual check-in, fresh content/new arrivals, and a warm farewell with Instagram redirect. Goal: capture late converters and maintain brand connection.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Persuasion Techniques -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">5. Persuasion Techniques Used</span>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <div class="technique-card">
+        <div class="technique-name">Identity Labeling</div>
+        <div class="technique-desc">Assigning users a personality label ("You're The Statement Maker") creates an identity they want to live up to. People are more likely to take actions consistent with their self-image. The profile name becomes an aspirational identity, not just a quiz result.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Scarcity (Real)</div>
+        <div class="technique-desc">Every NVH bag IS genuinely one-of-a-kind. This isn't manufactured urgency. The copy leans into this authentic scarcity: "Once it's gone, it's gone forever." Real scarcity is more persuasive than artificial countdown timers.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Social Proof Stacking</div>
+        <div class="technique-desc">Celebrity clients (Miranda Lambert, Megan Fox), press features (People, Marie Claire), review count (200+), Instagram following (100K+), and specific customer testimonials are layered throughout. Each type of social proof reinforces a different trust factor.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Risk Reversal</div>
+        <div class="technique-desc">The digital mock-up process is the key objection handler. "See exactly what your bag will look like before we paint a single brushstroke." This converts the fear of commitment into excitement about collaboration.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">The Blindspot Reveal</div>
+        <div class="technique-desc">WELCOME-01 mentions a "style blindspot." This creates curiosity and positions the brand as insightful. It also gives each profile a growth edge that makes the results feel personalized and nuanced, not just flattering.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Projection Technique (Q5)</div>
+        <div class="technique-desc">Asking "What compliment do you want to hear?" uses projection to reveal the emotional payoff they seek. This is more revealing than asking directly what they value, because it taps into aspirational self-image.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Progressive Commitment</div>
+        <div class="technique-desc">The quiz starts with easy identity questions and builds to higher-commitment questions (custom interest, importance of uniqueness). By Q6-Q7, users are invested in the outcome and more likely to provide their email.</div>
+      </div>
+      <div class="technique-card">
+        <div class="technique-name">Anti-Bagflation Positioning</div>
+        <div class="technique-desc">The copy subtly positions NVH as the "smart luxury" alternative to declining mainstream brands. "People are tired of paying more for declining quality." This taps into a real consumer frustration validated by market data.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Customer Segments -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">6. Customer Segments Explained</span>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <table class="profile-table">
+        <tr>
+          <th>Profile</th>
+          <th>Segment ID</th>
+          <th>Characteristics</th>
+          <th>Key Products</th>
+          <th>Messaging Tone</th>
+        </tr>
+        <tr>
+          <td style="color:#FFF;font-weight:600">The Statement Maker</td>
+          <td><code style="background:#1A1A1A;padding:2px 6px;border-radius:3px;font-size:12px">statement-maker</code></td>
+          <td>Bold, social media savvy, fashion-forward, 25-40. Wants bags that spark conversations and command attention.</td>
+          <td>Dripping Multi-Colored Hearts, Rainbow Reflection, Luv 2B YOU</td>
+          <td>Energetic, playful, empowering. "Be the main character."</td>
+        </tr>
+        <tr>
+          <td style="color:#FFF;font-weight:600">The Classic Collector</td>
+          <td><code style="background:#1A1A1A;padding:2px 6px;border-radius:3px;font-size:12px">classic-collector</code></td>
+          <td>Refined taste, established career, 35-55. Values craftsmanship, sees bags as investment pieces and heirlooms.</td>
+          <td>Audrey Hepburn, Cluster of Red Roses, Little Bow Peek</td>
+          <td>Sophisticated, warm. "Wearable art meets timeless luxury."</td>
+        </tr>
+        <tr>
+          <td style="color:#FFF;font-weight:600">The Sentimental Gifter</td>
+          <td><code style="background:#1A1A1A;padding:2px 6px;border-radius:3px;font-size:12px">sentimental-gifter</code></td>
+          <td>Shopping for others or milestones. Values personalization, emotional connection. Drawn to custom and gift items.</td>
+          <td>Custom Pet Portrait Pouch, Rose All Day Pouch, Spring Fling</td>
+          <td>Heartfelt, helpful, reassuring. "Give them something unforgettable."</td>
+        </tr>
+        <tr>
+          <td style="color:#FFF;font-weight:600">The Creative Rebel</td>
+          <td><code style="background:#1A1A1A;padding:2px 6px;border-radius:3px;font-size:12px">creative-rebel</code></td>
+          <td>Sees fashion as art and self-expression, 25-45. Values the subversive nature of painting luxury. Sustainability-minded.</td>
+          <td>The Ex-Wives Mistress, Evil Eye, Desert Born</td>
+          <td>Edgy, authentic, anti-establishment. "Art doesn't belong behind velvet ropes."</td>
+        </tr>
+        <tr>
+          <td style="color:#FFF;font-weight:600">The Aspiring Luxurist</td>
+          <td><code style="background:#1A1A1A;padding:2px 6px;border-radius:3px;font-size:12px">aspiring-luxurist</code></td>
+          <td>Entering luxury market, 22-35. Trend-aware, Instagram active. Looking for accessible entry points.</td>
+          <td>Rose All Day Pouch, Girl's Best Friend, The Socialite</td>
+          <td>Encouraging, inclusive, trend-aware. "Your first masterpiece awaits."</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggle(el){
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sequences - New Vintage Handbags Quiz Funnel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0A0A0A; color: #B8B8B8; font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; }
+  .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+  .back-link { display: inline-block; color: #C9A96E; text-decoration: none; font-size: 14px; margin-bottom: 32px; }
+  .back-link:hover { text-decoration: underline; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 36px; color: #FFFFFF; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 16px; margin-bottom: 48px; }
+  .stats-bar { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 48px; padding: 24px; background: #141414; border-radius: 12px; border: 1px solid #2A2A2A; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 28px; font-weight: 700; color: #C9A96E; font-family: 'Playfair Display', serif; }
+  .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-top: 4px; }
+  .sequence-section { margin-bottom: 32px; }
+  .sequence-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: #141414; border: 1px solid #2A2A2A; border-radius: 12px; cursor: pointer; transition: all 0.2s ease; }
+  .sequence-header:hover { border-color: rgba(201,169,110,0.4); background: #1A1A1A; }
+  .sequence-header.open { border-radius: 12px 12px 0 0; border-bottom-color: transparent; border-color: rgba(201,169,110,0.3); }
+  .sequence-title { font-family: 'Playfair Display', serif; font-size: 22px; color: #FFFFFF; }
+  .sequence-meta { display: flex; gap: 16px; align-items: center; }
+  .badge { padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge-all { background: rgba(201,169,110,0.15); color: #C9A96E; }
+  .badge-cold { background: rgba(59,130,246,0.15); color: #3B82F6; }
+  .badge-warm { background: rgba(245,158,11,0.15); color: #F59E0B; }
+  .badge-hot { background: rgba(34,197,94,0.15); color: #22C55E; }
+  .toggle-icon { font-size: 20px; color: #888; transition: transform 0.2s ease; }
+  .sequence-header.open .toggle-icon { transform: rotate(180deg); }
+  .sequence-body { display: none; border: 1px solid rgba(201,169,110,0.3); border-top: none; border-radius: 0 0 12px 12px; padding: 0; overflow: hidden; }
+  .sequence-body.open { display: block; }
+  .email-card { padding: 24px; border-bottom: 1px solid #1F1F1F; }
+  .email-card:last-child { border-bottom: none; }
+  .email-header-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+  .email-id { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #C9A96E; background: rgba(201,169,110,0.1); padding: 3px 10px; border-radius: 4px; }
+  .email-day { font-size: 12px; color: #888; }
+  .email-purpose { font-size: 12px; color: #666; font-style: italic; }
+  .email-subject { font-family: 'Playfair Display', serif; font-size: 18px; color: #FFFFFF; margin-bottom: 8px; }
+  .personalization-tags { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .ptag { font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .ptag-profile { background: rgba(212,165,165,0.15); color: #D4A5A5; }
+  .ptag-callback { background: rgba(59,130,246,0.15); color: #6DA3F6; }
+  .email-body-preview { font-size: 14px; line-height: 1.7; color: #999; white-space: pre-line; }
+  .email-cta { display: inline-block; margin-top: 12px; padding: 8px 20px; background: linear-gradient(135deg, #C9A96E, #B8944D); color: #0A0A0A; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; border-radius: 6px; text-decoration: none; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,169,110,0.3), transparent); margin: 48px 0; }
+  .legend { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #888; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; }
+    .stats-bar { flex-direction: column; gap: 16px; }
+    .sequence-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .email-header-row { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">&#8592; Back to Overview</a>
+  <h1>Email Sequences</h1>
+  <p class="subtitle">26 emails across 5 sequences with layered personalization</p>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">26</div><div class="stat-label">Total Emails</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Sequences</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">Profile Blocks</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Answer Callbacks</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Profiles</div></div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#C9A96E"></div> All Leads</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3B82F6"></div> Cold (0-49)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div> Warm (50-79)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#22C55E"></div> Hot (80-100)</div>
+  </div>
+
+  <!-- WELCOME SEQUENCE -->
+  <div class="sequence-section">
+    <div class="sequence-header" onclick="toggleSequence(this)">
+      <div class="sequence-title">Welcome Sequence</div>
+      <div class="sequence-meta">
+        <span class="badge badge-all">All Leads</span>
+        <span style="color:#888;font-size:13px">3 emails</span>
+        <span class="toggle-icon">&#9660;</span>
+      </div>
+    </div>
+    <div class="sequence-body">
+      <div class="email-card">
+        <div class="email-header-row">
+          <span class="email-id">WELCOME-01</span>
+          <span class="email-day">Day 0</span>
+          <span class="email-purpose">Results + Blindspot Reveal</span>
+        </div>
+        <div class="email-subject">Your Handbag Personality is in!</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">Hey {{first_name}}, Your results are in, and honestly? We love your taste. You're The {{profile_name}}, and that tells us something special about you.
+
+{{profile_block}}
+
+Here's the part most people don't expect: your Style DNA revealed a blindspot. Not a bad thing! It just means there's a side of your accessory style you haven't fully explored yet.
+
+P.S. Every piece in your lookbook is a one-of-one. Once it's gone, it's gone forever.</div>
+        <a href="#" class="email-cta">See Your Curated Picks</a>
+      </div>
+
+      <div class="email-card">
+        <div class="email-header-row">
+          <span class="email-id">WELCOME-02</span>
+          <span class="email-day">Day 2</span>
+          <span class="email-purpose">#1 Obstacle + Actionable Tip</span>
+        </div>
+        <div class="email-subject">The one thing holding you back</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span><span class="ptag ptag-callback">Answer Callback (Q3)</span></div>
+        <div class="email-body-preview">{{answer_callback_1}}
+
+The number one thing that keeps people from finding their perfect handbag? Overthinking it.
+
+{{profile_block}}
+
+Here's a tip: stop matching your bag to your outfit and start matching it to your energy.</div>
+        <a href="#" class="email-cta">Browse Pieces That Match Your Energy</a>
+      </div>
+
+      <div class="email-card">
+        <div class="email-header-row">
+          <span class="email-id">WELCOME-03</span>
+          <span class="email-day">Day 5</span>
+          <span class="email-purpose">Soft Offer Intro</span>
+        </div>
+        <div class="email-subject">Something most people don't know about us</div>
+        <div class="email-body-preview">Did you know that we've painted bags for Miranda Lambert, Megan Fox, Post Malone, and dozens of other A-listers?
+
+The same artists who create for celebrities? They're the ones who will paint your piece too.
+
+We're a team of women artists in Las Vegas who genuinely love what they do. Our custom request process lets you collaborate directly with our creative team.</div>
+        <a href="#" class="email-cta">See How the Custom Process Works</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLD NURTURE -->
+  <div class="sequence-section">
+    <div class="sequence-header" onclick="toggleSequence(this)">
+      <div class="sequence-title">Cold Nurture</div>
+      <div class="sequence-meta">
+        <span class="badge badge-cold">Score 0-49</span>
+        <span style="color:#888;font-size:13px">7 emails</span>
+        <span class="toggle-icon">&#9660;</span>
+      </div>
+    </div>
+    <div class="sequence-body">
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-01</span><span class="email-day">Day 1</span><span class="email-purpose">Education Part 1</span></div>
+        <div class="email-subject">The truth about painted bags</div>
+        <div class="personalization-tags"><span class="ptag ptag-callback">Answer Callback (Q3)</span></div>
+        <div class="email-body-preview">{{answer_callback_1}} Every painted bag starts as an authentic, pre-owned Louis Vuitton. We source them from the secondary market, verify authenticity, and our artists transform them into something entirely new.</div>
+        <a href="#" class="email-cta">See Our Before-and-After Gallery</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-02</span><span class="email-day">Day 3</span><span class="email-purpose">Education Part 2</span></div>
+        <div class="email-subject">How a handbag gets painted (the real story)</div>
+        <div class="email-body-preview">Behind-the-seams look at our 6-step process: Sourcing, Design, Preparation, Painting, Sealing, Quality check. 2-4 weeks for custom orders with digital mock-up approval.</div>
+        <a href="#" class="email-cta">Watch Our Artists in Action</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-03</span><span class="email-day">Day 5</span><span class="email-purpose">Myths Debunked</span></div>
+        <div class="email-subject">3 myths about painted luxury bags</div>
+        <div class="email-body-preview">Myth #1: Legality (first-sale doctrine). Myth #2: Paint durability (professional-grade sealants). Myth #3: Resale value (one-of-one uniqueness increases collectibility).</div>
+        <a href="#" class="email-cta">See the Collection for Yourself</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-04</span><span class="email-day">Day 8</span><span class="email-purpose">Problem Education</span></div>
+        <div class="email-subject">Why your handbag collection feels off</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">The hidden cost of sameness. You spend good money on a bag, then see someone at brunch carrying the exact same one. {{profile_block}} That's why hand-painted bags are having a moment.</div>
+        <a href="#" class="email-cta">Explore One-of-a-Kind Pieces</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-05</span><span class="email-day">Day 12</span><span class="email-purpose">Micro Case Study</span></div>
+        <div class="email-subject">"I get compliments every single time"</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">Karin M.'s story: ordered her first painted bag, now a repeat customer. "I get tons of compliments every time I wear the bag." {{profile_block}}</div>
+        <a href="#" class="email-cta">Read More Customer Stories</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-06</span><span class="email-day">Day 17</span><span class="email-purpose">Vision of Change</span></div>
+        <div class="email-subject">Imagine carrying something truly yours</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span><span class="ptag ptag-callback">Answer Callback (Q1)</span></div>
+        <div class="email-body-preview">Imagine reaching for your bag tomorrow and feeling genuinely excited. {{answer_callback_2}} {{profile_block}} It's about spending money on something that makes you feel something every time you pick it up.</div>
+        <a href="#" class="email-cta">Find the Piece That Gives You That Feeling</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">COLD-07</span><span class="email-day">Day 23</span><span class="email-purpose">Soft Check-In</span></div>
+        <div class="email-subject">Still thinking about it?</div>
+        <div class="email-body-preview">No pressure. Browse the collection when you have a quiet moment. See what catches your eye. Reply to this email with any questions. New pieces added regularly.</div>
+        <a href="#" class="email-cta">Browse the Full Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WARM ACTIVATION -->
+  <div class="sequence-section">
+    <div class="sequence-header" onclick="toggleSequence(this)">
+      <div class="sequence-title">Warm Activation</div>
+      <div class="sequence-meta">
+        <span class="badge badge-warm">Score 50-79</span>
+        <span style="color:#888;font-size:13px">6 emails</span>
+        <span class="toggle-icon">&#9660;</span>
+      </div>
+    </div>
+    <div class="sequence-body">
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">WARM-01</span><span class="email-day">Day 1</span><span class="email-purpose">Answer-Based Opener</span></div>
+        <div class="email-subject">We noticed something about your style</div>
+        <div class="personalization-tags"><span class="ptag ptag-callback">Answer Callback (Q3)</span></div>
+        <div class="email-body-preview">{{answer_callback_1}} As a {{profile_name}}, you've got a clear sense of what you want. Good news: it probably already exists in our collection. And if it doesn't? Our artists can create it.</div>
+        <a href="#" class="email-cta">See Your Personalized Picks</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">WARM-02</span><span class="email-day">Day 3</span><span class="email-purpose">Case Study</span></div>
+        <div class="email-subject">The bag that made Jessica cry (happy tears)</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">Jessica K.'s story: overwhelmed by options, scheduled free consultation, got a digital mock-up. "More beautiful than I could have imagined." {{profile_block}}</div>
+        <a href="#" class="email-cta">Schedule a Free Style Consultation</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">WARM-03</span><span class="email-day">Day 5</span><span class="email-purpose">Objection Handler</span></div>
+        <div class="email-subject">"But what if I don't like it?"</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">The digital mock-up process removes all risk. See exactly what your bag will look like before any painting begins. {{profile_block}} 10,000+ bags painted with a 5-star average.</div>
+        <a href="#" class="email-cta">See How the Mock-Up Process Works</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">WARM-04</span><span class="email-day">Day 8</span><span class="email-purpose">Social Proof</span></div>
+        <div class="email-subject">What 200+ reviewers say about us</div>
+        <div class="email-body-preview">Customer quotes from Tricia P., Julie W., Jessica K., Karin M. Celebrity clients: Miranda Lambert, Megan Fox, Post Malone. Press: People, Marie Claire, InStyle.</div>
+        <a href="#" class="email-cta">Join 200+ Happy Customers</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">WARM-05</span><span class="email-day">Day 11</span><span class="email-purpose">Clear Offer</span></div>
+        <div class="email-subject">Three ways to get your painted bag</div>
+        <div class="personalization-tags"><span class="ptag ptag-callback">Answer Callback (Q1)</span></div>
+        <div class="email-body-preview">{{answer_callback_2}} Three paths: Shop the Collection (ready to ship), Start a Custom Request (full collaboration), Start Small (pouches as entry point).</div>
+        <a href="#" class="email-cta">Explore All Three Options</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">WARM-06</span><span class="email-day">Day 15</span><span class="email-purpose">Before/After</span></div>
+        <div class="email-subject">Same bag. Completely different feeling.</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">A standard LV Neverfull vs. that same Neverfull with hand-painted art. {{profile_block}} Same base bag. Completely different feeling. Familiar made extraordinary.</div>
+        <a href="#" class="email-cta">See the Transformations</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOT PATH -->
+  <div class="sequence-section">
+    <div class="sequence-header" onclick="toggleSequence(this)">
+      <div class="sequence-title">Hot Path</div>
+      <div class="sequence-meta">
+        <span class="badge badge-hot">Score 80-100</span>
+        <span style="color:#888;font-size:13px">4 emails</span>
+        <span class="toggle-icon">&#9660;</span>
+      </div>
+    </div>
+    <div class="sequence-body">
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">HOT-01</span><span class="email-day">Day 1</span><span class="email-purpose">Direct CTA</span></div>
+        <div class="email-subject">We saved your picks</div>
+        <div class="personalization-tags"><span class="ptag ptag-callback">Answer Callback (Q3)</span></div>
+        <div class="email-body-preview">{{answer_callback_1}} As a {{profile_name}}, we've curated a collection for you. Every piece is a one-of-one. When someone buys it, it's gone forever.</div>
+        <a href="#" class="email-cta">See Your Curated Picks Now</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">HOT-02</span><span class="email-day">Day 3</span><span class="email-purpose">Fast-Track Case Study</span></div>
+        <div class="email-subject">From quiz to front door in 2 weeks</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">Tricia P. took the quiz, fell in love, had the bag in two weeks. "Absolutely perfect. Worth every penny." {{profile_block}} Catalog ships within days. Custom takes 2-4 weeks.</div>
+        <a href="#" class="email-cta">Shop Your Personalized Picks</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">HOT-03</span><span class="email-day">Day 6</span><span class="email-purpose">Urgency/Scarcity</span></div>
+        <div class="email-subject">Quick heads up about your picks</div>
+        <div class="email-body-preview">Pieces sell regularly. Every bag is one-of-a-kind, so no waitlist option. Some of your {{profile_name}} recommendations have been getting attention. If you've got your eye on something, this might be a good week to act.</div>
+        <a href="#" class="email-cta">Check If Your Picks Are Still Available</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">HOT-04</span><span class="email-day">Day 9</span><span class="email-purpose">Final Push</span></div>
+        <div class="email-subject">One last thought</div>
+        <div class="personalization-tags"><span class="ptag ptag-callback">Answer Callback (Q1)</span></div>
+        <div class="email-body-preview">{{answer_callback_2}} You either carry a bag that makes you feel something, or one that just holds your stuff. 200+ five-star reviews don't lie. You deserve something extraordinary.</div>
+        <a href="#" class="email-cta">Find Your Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RE-ENGAGEMENT -->
+  <div class="sequence-section">
+    <div class="sequence-header" onclick="toggleSequence(this)">
+      <div class="sequence-title">Re-Engagement</div>
+      <div class="sequence-meta">
+        <span class="badge badge-all">All Leads</span>
+        <span style="color:#888;font-size:13px">3 emails</span>
+        <span class="toggle-icon">&#9660;</span>
+      </div>
+    </div>
+    <div class="sequence-body">
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">REENGAGE-01</span><span class="email-day">+3 days</span><span class="email-purpose">Still Thinking?</span></div>
+        <div class="email-subject">Still thinking about your results?</div>
+        <div class="email-body-preview">It's been a while since you discovered you're a {{profile_name}}. We haven't forgotten about you. Life's too short for boring bags. Your personalized picks are still waiting.</div>
+        <a href="#" class="email-cta">Revisit Your Style Profile</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">REENGAGE-02</span><span class="email-day">+10 days</span><span class="email-purpose">New Angle</span></div>
+        <div class="email-subject">Something new just dropped</div>
+        <div class="personalization-tags"><span class="ptag ptag-profile">Profile Block</span></div>
+        <div class="email-body-preview">New pieces added since your quiz. {{profile_block}} Our Instagram has been on fire with behind-the-scenes studio content. Follow along for daily inspiration.</div>
+        <a href="#" class="email-cta">See What's New in the Collection</a>
+      </div>
+      <div class="email-card">
+        <div class="email-header-row"><span class="email-id">REENGAGE-03</span><span class="email-day">+17 days</span><span class="email-purpose">Farewell</span></div>
+        <div class="email-subject">Before we go quiet</div>
+        <div class="email-body-preview">Last email in the series. As a {{profile_name}}, your taste is exceptional. Your style profile is always available. Come back anytime for recommendations, the collection, or custom requests. Stay connected on Instagram with 100K+ New Vintage lovers.</div>
+        <a href="#" class="email-cta">Follow Us on Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleSequence(header) {
+  const body = header.nextElementSibling;
+  header.classList.toggle('open');
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>
