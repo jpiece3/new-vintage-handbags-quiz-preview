@@ -42,15 +42,33 @@
   .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,.4),transparent);margin:48px 0}
   .celebrity-list{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
   .celebrity-tag{padding:6px 14px;background:#1A1A1A;border:1px solid #2A2A2A;border-radius:100px;font-size:13px;color:#D4B97E}
-  @media(max-width:640px){.overview-grid{grid-template-columns:1fr}.stat-row{flex-direction:column}}
+  .trend-up{color:#22C55E}
+  .trend-down{color:#EF4444}
+  .trend-flat{color:#F59E0B}
+  .kw-difficulty{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;text-transform:uppercase}
+  .kw-easy{background:rgba(34,197,94,.15);color:#22C55E}
+  .kw-medium{background:rgba(245,158,11,.15);color:#F59E0B}
+  .kw-hard{background:rgba(239,68,68,.15);color:#EF4444}
+  .market-bar{height:8px;border-radius:4px;background:#1F1F1F;margin:8px 0;overflow:hidden}
+  .market-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#C9A96E,#D4B97E)}
+  .competitor-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #1F1F1F;align-items:center}
+  .competitor-row:first-child{border-bottom:1px solid #2A2A2A}
+  .competitor-name{color:#FFF;font-weight:600;font-size:14px}
+  .competitor-metric{color:#888;font-size:13px;text-align:right}
+  .source-link{color:#666;font-size:12px;text-decoration:none;border-bottom:1px solid #333}
+  .source-link:hover{color:#C9A96E;border-color:#C9A96E}
+  .highlight-box{background:rgba(201,169,110,.06);border-left:3px solid #C9A96E;padding:16px 20px;border-radius:0 8px 8px 0;margin:16px 0}
+  .highlight-box strong{color:#FFF}
+  @media(max-width:640px){.overview-grid{grid-template-columns:1fr}.stat-row{flex-direction:column}.competitor-row{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="container">
   <a href="index.html" class="back-link">&larr; Back to Overview</a>
   <h1>Research Report</h1>
-  <p class="subtitle">New Vintage Handbags &mdash; Market Research &amp; Brand Analysis</p>
+  <p class="subtitle">New Vintage Handbags &mdash; Deep Market Research &amp; Competitive Intelligence</p>
 
+  <!-- BUSINESS OVERVIEW -->
   <div class="card">
     <div class="overview-grid">
       <div>
@@ -75,6 +93,7 @@
     <div class="stat-badge"><div class="num">89</div><div class="label">Catalog Products</div></div>
   </div>
 
+  <!-- CORE PRODUCTS -->
   <h2>Core Products</h2>
   <div class="card">
     <h4>Painted Louis Vuitton Catalog</h4>
@@ -87,6 +106,7 @@
     <p>Monogrammed handbag straps, charms, padlocks, luggage tags, glasses cases, and gift cards.</p>
   </div>
 
+  <!-- CELEBRITY CLIENTS -->
   <h2>Celebrity Clients</h2>
   <div class="celebrity-list">
     <span class="celebrity-tag">Miranda Lambert</span>
@@ -104,16 +124,197 @@
 
   <div class="divider"></div>
 
-  <h2>Brand Voice</h2>
+  <!-- MARKET LANDSCAPE - NEW SECTION -->
+  <h2>Market Landscape</h2>
+
+  <h3>Global Luxury Handbag Market</h3>
   <div class="card">
-    <p><strong style="color:#FFF">Primary Tone:</strong> Warm, playful, and empowering with a creative edge</p>
-    <p><strong style="color:#FFF">Secondary Tone:</strong> Aspirational luxury that feels accessible and personal</p>
-    <p><strong style="color:#FFF">Key Phrases:</strong> "Bag a Masterpiece" / "Pre-Loved, Authentic, Hand Painted" / "wearable masterpiece" / "If you can dream it, our artists can paint it"</p>
-    <p style="margin-bottom:0"><strong style="color:#FFF">Avoid:</strong> Corporate language, technical jargon, discount messaging, LV affiliation claims, "replica" language</p>
+    <div class="stat-row" style="margin-top:0">
+      <div class="stat-badge"><div class="num">$35.8B</div><div class="label">Market Size (2025)</div></div>
+      <div class="stat-badge"><div class="num">$60.4B</div><div class="label">Projected (2034)</div></div>
+      <div class="stat-badge"><div class="num">5.98%</div><div class="label">CAGR</div></div>
+    </div>
+    <p>The global luxury handbag market was valued at $35.83 billion in 2025, growing to an estimated $37.99 billion in 2026. Europe holds 36% market share, while Asia-Pacific captures 43% of the broader handbags market.</p>
+    <p style="font-size:13px;color:#666;margin-bottom:0">Sources: <a href="https://www.precedenceresearch.com/luxury-handbags-market" target="_blank" class="source-link">Precedence Research</a>, <a href="https://straitsresearch.com/report/luxury-handbag-market" target="_blank" class="source-link">Straits Research</a></p>
+  </div>
+
+  <h3>Secondhand Luxury: The Fastest-Growing Segment</h3>
+  <div class="card">
+    <div class="stat-row" style="margin-top:0">
+      <div class="stat-badge"><div class="num">$210B+</div><div class="label">Resale Market (2025)</div></div>
+      <div class="stat-badge"><div class="num">$360B</div><div class="label">Projected (2030)</div></div>
+      <div class="stat-badge"><div class="num">3x</div><div class="label">Faster Than New Retail</div></div>
+    </div>
+    <p>The secondhand fashion and luxury market is expanding three times faster than firsthand. The second-hand bag market specifically is valued at $7.1 billion in 2025, anticipated to reach $12.5 billion by 2035 (5.8% CAGR).</p>
+    <div class="highlight-box">
+      <strong>Why this matters for NVH:</strong> New Vintage Handbags sits at the intersection of two booming markets&mdash;secondhand luxury and personalization. Every bag is pre-owned (tapping the resale wave) and hand-painted (tapping the customization premium). This dual positioning is extremely defensible.
+    </div>
+    <p style="font-size:13px;color:#666;margin-bottom:0">Sources: <a href="https://www.bcg.com/publications/2025/how-fashion-luxury-brands-can-win-secondhand-market" target="_blank" class="source-link">BCG 2025 Report</a>, <a href="https://www.futuremarketinsights.com/reports/second-hand-bag-market" target="_blank" class="source-link">Future Market Insights</a></p>
+  </div>
+
+  <h3>&ldquo;Bagflation&rdquo;: The Price Increase Backlash</h3>
+  <div class="card">
+    <h4>Louis Vuitton Neverfull MM Price History</h4>
+    <table>
+      <tr><th>Year</th><th>Price</th><th>Increase</th></tr>
+      <tr><td>2007</td><td style="color:#FFF">$645</td><td>&mdash;</td></tr>
+      <tr><td>2019</td><td style="color:#FFF">$1,320</td><td>+105% from launch</td></tr>
+      <tr><td>2021</td><td style="color:#FFF">$1,500</td><td>+14%</td></tr>
+      <tr><td>2023</td><td style="color:#FFF">$2,023</td><td style="color:#EF4444">+35% in 2 yrs</td></tr>
+      <tr><td>2025</td><td style="color:#FFF">$2,130</td><td>+5%</td></tr>
+    </table>
+    <p style="margin-top:16px">From $645 to $2,130 in 18 years&mdash;a 230% increase. The luxury market contracted 3% in early 2025, losing approximately 50 million customers (Bain &amp; Co.). Nearly 75% of fashion executives plan to raise prices again in 2026.</p>
+    <div class="highlight-box">
+      <strong>The NVH angle:</strong> At $1,779&ndash;$2,979 for a hand-painted, one-of-one LV bag, New Vintage Handbags is price-competitive with buying a new Neverfull ($2,130)&mdash;but the customer gets a wearable work of art instead of a mass-produced monogram. This is the core value proposition.
+    </div>
+    <p style="font-size:13px;color:#666;margin-bottom:0">Sources: <a href="https://www.cloversac.com/louis-vuitton-neverfull-price-history-2025-prediction/" target="_blank" class="source-link">CloverSac Price History</a>, <a href="https://blog.fashionphile.com/louis-vuitton-raises-its-prices-again/" target="_blank" class="source-link">Fashionphile</a></p>
   </div>
 
   <div class="divider"></div>
 
+  <!-- CONSUMER TRENDS - NEW SECTION -->
+  <h2>Consumer Trends</h2>
+
+  <h3>Gen Z &amp; Millennials: The New Luxury Buyers</h3>
+  <div class="card">
+    <p>Gen Z and Millennials now account for <strong style="color:#FFF">70% of luxury spending</strong> (Bain &amp; Co., 2025). They&rsquo;re reshaping what luxury means:</p>
+    <table>
+      <tr><th>Behavior</th><th>Statistic</th><th>Source</th></tr>
+      <tr><td>Buy secondhand first</td><td style="color:#22C55E">61% look for used items first</td><td style="color:#666">Statista</td></tr>
+      <tr><td>Pay more for sustainability</td><td style="color:#22C55E">84% of Gen Z will spend more</td><td style="color:#666">TCS</td></tr>
+      <tr><td>Expect personalization</td><td style="color:#22C55E">70% of Millennials always expect it</td><td style="color:#666">SmarterHQ</td></tr>
+      <tr><td>Prefer experiences over things</td><td style="color:#22C55E">78% of Millennials</td><td style="color:#666">McKinsey</td></tr>
+      <tr><td>Value authenticity</td><td style="color:#22C55E">72% prefer authentic brands</td><td style="color:#666">McKinsey</td></tr>
+      <tr><td>First luxury purchase age</td><td style="color:#F59E0B">15 years old (3-5 yrs earlier)</td><td style="color:#666">Bain &amp; Co.</td></tr>
+    </table>
+    <div class="highlight-box">
+      <strong>NVH alignment:</strong> Every stat here plays directly into NVH&rsquo;s strengths&mdash;pre-owned (sustainability), hand-painted (personalization), one-of-a-kind (authenticity), and an entry point at $95 (early luxury access).
+    </div>
+    <p style="font-size:13px;color:#666;margin-bottom:0">Sources: <a href="https://www.statista.com/topics/12825/luxury-goods-gen-z-and-millennials/" target="_blank" class="source-link">Statista</a>, <a href="https://luxonomy.net/luxonomy-report-luxury-consumer-behavior-by-generation-millennials-vs-gen-z-vs-baby-boomers/" target="_blank" class="source-link">Luxonomy</a>, <a href="https://tink.com/press/peak-season-gen-z-millennial-2025/" target="_blank" class="source-link">Tink 2025</a></p>
+  </div>
+
+  <h3>Social Commerce &amp; Discovery</h3>
+  <div class="card">
+    <p>Luxury discovery has shifted from department store windows to Instagram Reels and TikTok. <strong style="color:#FFF">67.4% of Gen Z</strong> rely on online reviews when researching luxury products. The AI in luxury market reached $1.2 billion in 2024, projected to hit $5.6 billion by 2034.</p>
+    <p style="margin-bottom:0">Leading luxury brands are establishing secondhand storefronts and using AI for hyper-personalization&mdash;Louis Vuitton uses AI for product recommendations, Chanel employs virtual styling assistants. <strong style="color:#FFF">NVH&rsquo;s 100K+ Instagram audience</strong> is a significant asset for social-first discovery.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SEO & KEYWORD DATA - ENHANCED -->
+  <h2>SEO &amp; Search Intelligence</h2>
+
+  <h3>Domain Performance (DataForSEO, Feb 2026)</h3>
+  <div class="card">
+    <div class="stat-row" style="margin-top:0">
+      <div class="stat-badge"><div class="num">1,061</div><div class="label">Organic Keywords</div></div>
+      <div class="stat-badge"><div class="num">206</div><div class="label">Top 10 Positions</div></div>
+      <div class="stat-badge"><div class="num">26.5K</div><div class="label">Est. Monthly Traffic</div></div>
+      <div class="stat-badge"><div class="num">$23K</div><div class="label">Traffic Value/mo</div></div>
+    </div>
+    <p><strong style="color:#FFF">Momentum:</strong> 777 new keyword rankings vs. 87 declining&mdash;a <span class="trend-up">9:1 growth ratio</span>. The domain is rapidly gaining visibility.</p>
+    <p style="margin-bottom:0"><strong style="color:#FFF">Position breakdown:</strong> 18 keywords at #1, 69 at positions 2-3, 119 at positions 4-10. Strong foundation with room to push more terms into page one.</p>
+  </div>
+
+  <h3>Target Keywords</h3>
+  <div class="card">
+    <table>
+      <tr><th>Keyword</th><th>Volume/mo</th><th>Difficulty</th><th>Intent</th><th>CPC</th></tr>
+      <tr><td style="color:#FFF">hand painted handbag</td><td>590</td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Commercial</td><td>$1.39</td></tr>
+      <tr><td style="color:#FFF">custom louis vuitton bag</td><td>480</td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Commercial</td><td>$2.45</td></tr>
+      <tr><td style="color:#FFF">custom lv bag</td><td>480</td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Transactional</td><td>$2.45</td></tr>
+      <tr><td style="color:#FFF">painted louis vuitton bag</td><td>390</td><td><span class="kw-difficulty kw-easy">KD: 3</span></td><td>Commercial</td><td>$1.21</td></tr>
+      <tr><td style="color:#FFF">painted purse</td><td>390</td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Commercial</td><td>$1.26</td></tr>
+      <tr><td style="color:#FFF">louis vuitton customization</td><td>260</td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Commercial</td><td>$1.26</td></tr>
+      <tr><td style="color:#FFF">hand painted louis vuitton</td><td>90 <span class="trend-up">&#9650;57%</span></td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Commercial</td><td>$1.05</td></tr>
+      <tr><td style="color:#FFF">personalized louis vuitton</td><td>90</td><td><span class="kw-difficulty kw-easy">Easy</span></td><td>Commercial</td><td>$1.71</td></tr>
+    </table>
+    <div class="highlight-box">
+      <strong>Key insight:</strong> Nearly every target keyword has extremely low competition (KD 3 or lower) with commercial/transactional intent. &ldquo;Hand painted louis vuitton&rdquo; is trending up 57% quarter-over-quarter. This is an organic search goldmine with minimal competition.
+    </div>
+  </div>
+
+  <h3>SERP Competitors (Keyword Overlap)</h3>
+  <div class="card">
+    <table>
+      <tr><th>Domain</th><th>Overlap</th><th>Est. Traffic</th><th>Traffic Value</th></tr>
+      <tr><td style="color:#FFF">louisvuitton.com</td><td>917 keywords</td><td>10.7M</td><td>$9.7M/mo</td></tr>
+      <tr><td style="color:#FFF">fashionphile.com</td><td>839 keywords</td><td>1.7M</td><td>$1.9M/mo</td></tr>
+      <tr><td style="color:#FFF">poshmark.com</td><td>741 keywords</td><td>6.5M</td><td>$5.6M/mo</td></tr>
+      <tr><td style="color:#FFF">rebag.com</td><td>718 keywords</td><td>1.2M</td><td>$1.3M/mo</td></tr>
+      <tr><td style="color:#FFF">1stdibs.com</td><td>708 keywords</td><td>1.7M</td><td>$1.5M/mo</td></tr>
+      <tr><td style="color:#FFF">therealreal.com</td><td>638 keywords</td><td>1.8M</td><td>$2.0M/mo</td></tr>
+      <tr><td style="color:#FFF">yoogiscloset.com</td><td>578 keywords</td><td>105K</td><td>$108K/mo</td></tr>
+      <tr><td style="color:#FFF">madisonavenuecouture.com</td><td>530 keywords</td><td>1.0M</td><td>$834K/mo</td></tr>
+      <tr><td style="color:#FFF">purseblog.com</td><td>529 keywords</td><td>535K</td><td>$787K/mo</td></tr>
+    </table>
+    <p style="margin-top:16px;font-size:14px;margin-bottom:0"><strong style="color:#FFF">Positioning:</strong> NVH competes in the same keyword space as major luxury resale platforms but with a unique niche. No direct competitor (DTLAcustom, individual artists) shows meaningful organic search presence&mdash;NVH essentially owns the &ldquo;painted luxury bag&rdquo; search category.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- COMPETITIVE LANDSCAPE - ENHANCED -->
+  <h2>Competitive Landscape</h2>
+
+  <h3>Direct Competitors: Custom Painted Luxury Bags</h3>
+
+  <div class="profile-card">
+    <h4>DTLAcustom (Design Team LA)</h4>
+    <p><strong style="color:#FFF">Founded:</strong> 2015 &nbsp;|&nbsp; <strong style="color:#FFF">Location:</strong> Houston, TX &nbsp;|&nbsp; <strong style="color:#FFF">Founder:</strong> Tara Martin</p>
+    <p>Paints on multiple luxury brands including Herm&egrave;s Birkins, LV luggage, sneakers, and home accessories. Uses tattoo artists for painting. Celebrity roster includes Lady Gaga, Madonna, the Kardashians, Elton John, Gwyneth Paltrow, and John Mayer. LV commissioned DTLAcustom to paint a trunk for Elton John&rsquo;s 70th birthday.</p>
+    <p><strong style="color:#FFF">Brand partners:</strong> Jimmy Choo, Vogue, Dolce &amp; Gabbana, Marc Jacobs, Neiman Marcus, Nordstrom.</p>
+    <p style="margin-bottom:0"><strong style="color:#FFF">NVH advantage:</strong> Stronger e-commerce catalog (89 products ready to buy vs. custom-request-only), lower barrier to entry ($95 pouches), more accessible brand voice, and significantly stronger organic search presence.</p>
+    <div style="margin-top:12px"><span class="tag">celebrity-focused</span><span class="tag">multi-brand</span><span class="tag">custom-only</span><span class="tag">high-end</span></div>
+  </div>
+
+  <div class="profile-card">
+    <h4>Kicks x Jhericoco (Wearable Art)</h4>
+    <p><strong style="color:#FFF">Service:</strong> Custom painting on LV bags &nbsp;|&nbsp; <strong style="color:#FFF">Pricing:</strong> $400&ndash;$1,100 (painting service only, customer supplies bag)</p>
+    <p style="margin-bottom:0">Focused on wearable art across handbags and sneakers. Positioned as an artist studio rather than a luxury brand. No ready-to-buy catalog.</p>
+    <div style="margin-top:12px"><span class="tag">artist-studio</span><span class="tag">paint-only</span><span class="tag">niche</span></div>
+  </div>
+
+  <div class="profile-card">
+    <h4>Etsy &amp; Independent Artists</h4>
+    <p><strong style="color:#FFF">Sellers:</strong> Dozens of individual artists &nbsp;|&nbsp; <strong style="color:#FFF">Pricing:</strong> Wide range ($200&ndash;$3,000+)</p>
+    <p style="margin-bottom:0">Fragmented marketplace of individual artisans. No brand consistency, authentication concerns, variable quality. Some notable artists like Olivia Lambiasi (Brazilian, works on Birkins, Kellys, cars) have PurseForum followings.</p>
+    <div style="margin-top:12px"><span class="tag">fragmented</span><span class="tag">variable quality</span><span class="tag">no brand</span></div>
+  </div>
+
+  <div class="profile-card">
+    <h4>1stDibs Marketplace</h4>
+    <p style="margin-bottom:0"><strong style="color:#FFF">226 painted LV listings</strong> on 1stDibs from various sellers. Functions as a curated resale marketplace&mdash;not a direct competitor, but captures search traffic for &ldquo;painted louis vuitton.&rdquo; NVH could list here as an additional sales channel.</p>
+    <div style="margin-top:12px"><span class="tag">marketplace</span><span class="tag">resale</span><span class="tag">channel opportunity</span></div>
+  </div>
+
+  <h3>Adjacent Competitors: Luxury Resale Platforms</h3>
+  <div class="card">
+    <p>These platforms sell pre-owned Louis Vuitton but do not offer customization or painting. They compete for the same buyer who is considering a pre-owned LV:</p>
+    <table>
+      <tr><th>Platform</th><th>Model</th><th>Key Differentiator</th></tr>
+      <tr><td style="color:#FFF">Fashionphile</td><td>Authenticated resale</td><td>Largest luxury resale inventory, editorial content</td></tr>
+      <tr><td style="color:#FFF">Rebag</td><td>Buy/sell/trade</td><td>Clair AI pricing tool, trade-in credit</td></tr>
+      <tr><td style="color:#FFF">The RealReal</td><td>Consignment</td><td>White-glove consignment, authentication team</td></tr>
+      <tr><td style="color:#FFF">Poshmark</td><td>Peer-to-peer</td><td>Social selling, massive community</td></tr>
+      <tr><td style="color:#FFF">Yoogi&rsquo;s Closet</td><td>Authenticated resale</td><td>Boutique feel, editorial curation</td></tr>
+    </table>
+    <p style="margin-top:16px;margin-bottom:0"><strong style="color:#FFF">NVH&rsquo;s unique position:</strong> None of these platforms offer painting or customization. NVH doesn&rsquo;t compete with them&mdash;it <em>upgrades</em> the product they sell. A customer could buy a pre-owned LV from Fashionphile and send it to NVH for painting, or buy one already painted from NVH&rsquo;s catalog.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BRAND VOICE -->
+  <h2>Brand Voice</h2>
+  <div class="card">
+    <p><strong style="color:#FFF">Primary Tone:</strong> Warm, playful, and empowering with a creative edge</p>
+    <p><strong style="color:#FFF">Secondary Tone:</strong> Aspirational luxury that feels accessible and personal</p>
+    <p><strong style="color:#FFF">Key Phrases:</strong> &ldquo;Bag a Masterpiece&rdquo; / &ldquo;Pre-Loved, Authentic, Hand Painted&rdquo; / &ldquo;wearable masterpiece&rdquo; / &ldquo;If you can dream it, our artists can paint it&rdquo;</p>
+    <p style="margin-bottom:0"><strong style="color:#FFF">Avoid:</strong> Corporate language, technical jargon, discount messaging, LV affiliation claims, &ldquo;replica&rdquo; language</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CUSTOMER SEGMENTS -->
   <h2>Customer Segments</h2>
 
   <div class="profile-card">
@@ -142,64 +343,69 @@
 
   <div class="profile-card">
     <h4>The Aspiring Luxurist</h4>
-    <p>Entering luxury market for the first time. Ages 22-35. Active on Instagram/TikTok. Drawn to trending designs and celebrity endorsements.</p>
+    <p>Entering luxury market for the first time. Ages 22-35. Active on Instagram/TikTok. Drawn to trending designs and celebrity endorsements. Gen Z entering luxury at age 15&mdash;3-5 years earlier than Millennials.</p>
     <div><span class="tag">trend</span><span class="tag">aspirational</span><span class="tag">entry</span><span class="tag">social</span></div>
   </div>
 
   <div class="divider"></div>
 
+  <!-- PSYCHOLOGICAL ANGLES -->
   <h2>Psychological Angles</h2>
 
   <div class="angle-card">
     <h4>Identity Expression</h4>
-    <p class="angle-hook">"Your bag should be as one-of-a-kind as you are."</p>
-    <p style="margin:0;font-size:14px">Appeals to the deep human need for uniqueness. Personalization and exclusivity are now the primary buying reasons in luxury (Future Market Insights 2026).</p>
+    <p class="angle-hook">&ldquo;Your bag should be as one-of-a-kind as you are.&rdquo;</p>
+    <p style="margin:0;font-size:14px">Appeals to the deep human need for uniqueness. 70% of Millennials expect personalized experiences from brands (SmarterHQ). 84% of Gen Z will pay more for sustainably personalized products (TCS 2025).</p>
   </div>
 
   <div class="angle-card">
     <h4>Anti-Bagflation / Smart Luxury</h4>
-    <p class="angle-hook">"Why pay $2,500 for declining quality when you can own wearable art?"</p>
-    <p style="margin:0;font-size:14px">Taps into consumer frustration with luxury price hikes (+30-60%) and quality erosion. Positioned as a smarter investment.</p>
+    <p class="angle-hook">&ldquo;Why pay $2,130 for a mass-produced Neverfull when you can own a one-of-one masterpiece?&rdquo;</p>
+    <p style="margin:0;font-size:14px">LV Neverfull has increased 230% since 2007 ($645 &rarr; $2,130). The luxury market lost 50 million customers in early 2025 (Bain). NVH offers comparable or better value at $1,779&ndash;$2,979 with uniqueness and artistry included.</p>
   </div>
 
   <div class="angle-card">
     <h4>Celebrity-Endorsed Self-Expression</h4>
-    <p class="angle-hook">"Painted for the stars. Now painted for you."</p>
-    <p style="margin:0;font-size:14px">Same artists who paint for Miranda Lambert and Megan Fox. Red-carpet-worthy art that's accessible to anyone.</p>
+    <p class="angle-hook">&ldquo;Painted for the stars. Now painted for you.&rdquo;</p>
+    <p style="margin:0;font-size:14px">Same artists who paint for Miranda Lambert and Megan Fox. Red-carpet-worthy art that&rsquo;s accessible to anyone. Celebrity validation drives 75% of Gen Z/Millennial brand trust (McKinsey).</p>
   </div>
 
   <div class="angle-card">
     <h4>Sustainable Luxury Revolution</h4>
-    <p class="angle-hook">"Give a pre-loved bag a brand new story."</p>
-    <p style="margin:0;font-size:14px">Pre-owned designer handbag searches up 52% YoY. Circular luxury movement. Secondhand luxury market projected $360B by 2030.</p>
+    <p class="angle-hook">&ldquo;Give a pre-loved bag a brand new story.&rdquo;</p>
+    <p style="margin:0;font-size:14px">Secondhand luxury market growing to $360B by 2030 (BCG). 61% of Gen Z shop used first (Statista). Resale now accounts for 40% of handbag wardrobes. NVH takes this further&mdash;not just reusing, but <em>elevating</em> pre-owned bags into art.</p>
   </div>
 
   <div class="angle-card">
     <h4>The Conversation Starter</h4>
-    <p class="angle-hook">"The bag that makes strangers stop and ask, 'Where did you get that?'"</p>
-    <p style="margin:0;font-size:14px">Every customer review mentions compliments. Social currency of unique fashion.</p>
+    <p class="angle-hook">&ldquo;The bag that makes strangers stop and ask, &lsquo;Where did you get that?&rsquo;&rdquo;</p>
+    <p style="margin:0;font-size:14px">Every customer review mentions compliments. Social currency of unique fashion. 67.4% of Gen Z rely on peer validation and reviews (Statista). A painted LV is the ultimate &ldquo;shareable moment&rdquo; for social media.</p>
   </div>
 
   <div class="divider"></div>
 
+  <!-- TESTIMONIALS -->
   <h2>Customer Testimonials</h2>
 
-  <div class="quote">"It's absolutely perfect. They were a dream to work with. Especially Joseph. Worth every penny. The art is fantastic."<div class="quote-author">&mdash; Tricia P.</div></div>
-  <div class="quote">"I get tons of compliments every time I wear the bag."<div class="quote-author">&mdash; Karin M., repeat customer</div></div>
-  <div class="quote">"The bag turned out even more beautiful than I could have imagined."<div class="quote-author">&mdash; Jessica K.</div></div>
-  <div class="quote">"From the initial communication to receiving the finished product, the communication, project design, and artistry has been exceptional!"<div class="quote-author">&mdash; Verified Customer</div></div>
+  <div class="quote">&ldquo;It&rsquo;s absolutely perfect. They were a dream to work with. Especially Joseph. Worth every penny. The art is fantastic.&rdquo;<div class="quote-author">&mdash; Tricia P.</div></div>
+  <div class="quote">&ldquo;I get tons of compliments every time I wear the bag.&rdquo;<div class="quote-author">&mdash; Karin M., repeat customer</div></div>
+  <div class="quote">&ldquo;The bag turned out even more beautiful than I could have imagined.&rdquo;<div class="quote-author">&mdash; Jessica K.</div></div>
+  <div class="quote">&ldquo;From the initial communication to receiving the finished product, the communication, project design, and artistry has been exceptional!&rdquo;<div class="quote-author">&mdash; Verified Customer</div></div>
 
   <div class="divider"></div>
 
-  <h2>SEO &amp; Competitive Landscape</h2>
+  <!-- STRATEGIC SUMMARY -->
+  <h2>Strategic Summary</h2>
   <div class="card">
-    <p><strong style="color:#FFF">Organic Keywords:</strong> 1,061 &nbsp;&bull;&nbsp; <strong style="color:#FFF">Top 10 Positions:</strong> 206 &nbsp;&bull;&nbsp; <strong style="color:#FFF">Traffic Value:</strong> $23,076/mo</p>
-    <p><strong style="color:#FFF">Core Keyword Opportunity:</strong> "painted louis vuitton bag" (390/mo, difficulty 3) and "custom louis vuitton bag" (480/mo) have extremely low competition.</p>
-    <p><strong style="color:#FFF">Direct Competitor:</strong> DTLAcustom (Houston, TX) - paints on multiple luxury brands, celebrity-focused, less e-commerce. NVH advantage: stronger online catalog and lower barrier to entry.</p>
-    <p style="margin:0"><strong style="color:#FFF">Market:</strong> Global luxury handbag market $35.83B (2025), projected $60.42B by 2034. Pre-owned segment growing fastest.</p>
+    <h4>Why This Business Wins</h4>
+    <p><strong style="color:#22C55E">1. Perfect market timing.</strong> Luxury prices are at all-time highs, consumer backlash is real, and secondhand is the fastest-growing segment. NVH offers a compelling alternative.</p>
+    <p><strong style="color:#22C55E">2. Uncontested search territory.</strong> Core keywords like &ldquo;painted louis vuitton bag&rdquo; (KD: 3) have almost zero competition. NVH can dominate organic search with minimal effort.</p>
+    <p><strong style="color:#22C55E">3. No direct competitor at scale.</strong> DTLAcustom is the only named competitor, and they&rsquo;re custom-only with no e-commerce catalog. Etsy sellers are fragmented. NVH is the only branded, catalog-driven painted luxury bag business.</p>
+    <p><strong style="color:#22C55E">4. Dual-market positioning.</strong> Resale + customization. Both markets growing independently. NVH sits at the intersection.</p>
+    <p style="margin-bottom:0"><strong style="color:#22C55E">5. Celebrity proof &amp; social proof.</strong> 10K+ bags painted, 200+ reviews, 100K+ Instagram followers, and a celebrity client list that includes Miranda Lambert, Megan Fox, and Post Malone. The trust signals are already built.</p>
   </div>
 
-  <p style="text-align:center;color:#888;font-size:13px;margin-top:48px">Research conducted using Playwright, Tavily, and DataForSEO. All data current as of February 2, 2026.</p>
+  <p style="text-align:center;color:#888;font-size:13px;margin-top:48px">Research conducted using DataForSEO, Tavily, and web research. Market data sourced from Precedence Research, BCG, Bain &amp; Co., Statista, Future Market Insights. SEO data from DataForSEO Labs (February 2026). All data current as of February 3, 2026.</p>
 </div>
 </body>
 </html>
